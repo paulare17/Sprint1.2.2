@@ -1,1 +1,79 @@
 @import "bootstrap/scss/bootstrap";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+$primary: #5265e1;
+$secondary: #fa5959;
+$gris: #797979;
+
+#navbarNav {
+  text-transform: uppercase;
+}
+
+.navbar-collapse {
+    transition: none !important;
+    
+  &.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 32, 174, 0.619);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .nav-link {
+      color: white !important;
+      padding: 1rem;
+      border-bottom: 1px solid white;
+    }
+
+    #login {
+      border: 2px solid white !important;
+    }
+
+    #logo-image {
+      display: none !important;
+    }
+  }
+}
+
+.nav-item {
+  margin: 1.5rem;
+}
+
+#login {
+    color: white;
+    width: 7rem;
+    text-align: center;
+
+    // En pantalles petites (< 768px), sembla un nav-link normal
+    @media (max-width: 767.98px) {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    // En pantalles grans (≥ 768px), té característiques de botó
+    @media (min-width: 768px) {
+        background-color: $secondary;
+        border: 2px solid white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        box-shadow: $box-shadow;
+
+    }
+}
+
+#login:hover {
+  background-color: #f7f7f7;
+  color: $secondary;
+  border: solid $secondary;
+}

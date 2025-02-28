@@ -1,25 +1,25 @@
 import "./styles.scss";
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+//ocultar - amagar el close button del menú
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const closeBtn = document.getElementById("close-btn");
+    const navbarNav = document.getElementById("navbarNav");
 
-setupCounter(document.querySelector('#counter'))
+    // Quan el menú s'obre, mostra el botó de tancar
+    navbarNav.addEventListener("shown.bs.collapse", function () {
+        closeBtn.classList.remove("d-none");
+    });
+
+    // Quan el menú es tanca, amaga el botó de tancar
+    navbarNav.addEventListener("hidden.bs.collapse", function () {
+        closeBtn.classList.add("d-none");
+    });
+
+    // Fes que el botó de tancar funcioni
+    closeBtn.addEventListener("click", function () {
+        navbarNav.classList.remove("show"); // Tanca el menú manualment
+        closeBtn.classList.add("d-none");   // Amaga el botó
+    });
+});

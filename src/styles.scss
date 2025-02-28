@@ -16,7 +16,7 @@ $gris: #797979;
 
 .navbar-collapse {
     transition: none !important;
-    
+
   &.show {
     position: fixed;
     top: 0;
@@ -76,4 +76,16 @@ $gris: #797979;
   background-color: #f7f7f7;
   color: $secondary;
   border: solid $secondary;
+}
+
+
+.blue-rectangle {
+    bottom:0;
+    right: 0;
+    width: 80%;
+    height: 70%;
+    border-radius: 0px 0px 0px 200px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: $primary;
+    z-index: 0 !important;
 }

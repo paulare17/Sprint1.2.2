@@ -10,12 +10,18 @@ $primary: #5265e1;
 $secondary: #fa5959;
 $gris: #797979;
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 #navbarNav {
   text-transform: uppercase;
 }
 
 .navbar-collapse {
-    transition: none !important;
+  transition: none !important;
 
   &.show {
     position: fixed;
@@ -50,26 +56,25 @@ $gris: #797979;
 }
 
 #login {
-    color: white;
-    width: 7rem;
-    text-align: center;
+  color: white;
+  width: 7rem;
+  text-align: center;
 
-    // En pantalles petites (< 768px), sembla un nav-link normal
-    @media (max-width: 767.98px) {
-        background-color: transparent;
-        border: none;
-        padding: 0;
-    }
+  // En pantalles petites (< 768px), sembla un nav-link normal
+  @media (max-width: 767.98px) {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
 
-    // En pantalles grans (≥ 768px), té característiques de botó
-    @media (min-width: 768px) {
-        background-color: $secondary;
-        border: 2px solid white;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        box-shadow: $box-shadow;
-
-    }
+  // En pantalles grans (≥ 768px), té característiques de botó
+  @media (min-width: 768px) {
+    background-color: $secondary;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+  }
 }
 
 #login:hover {
@@ -78,14 +83,56 @@ $gris: #797979;
   border: solid $secondary;
 }
 
+#section1 {
+  padding-top: 6rem;
+  width: 100% !important;
 
-.blue-rectangle {
-    bottom:0;
+  .blue-rectangle {
+    bottom: 0;
     right: 0;
     width: 80%;
-    height: 70%;
-    border-radius: 0px 0px 0px 200px;
+    height: 60%;
+    border-radius: 0px 0px 0px 120px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     background-color: $primary;
     z-index: 0 !important;
+  }
+  #img-rectang {
+    padding-top: 3rem;
+  }
+  #text-global {
+    padding-left: 3rem;
+    padding-top: 3rem;
+
+    .text-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .text-content {
+      max-width: 25rem; // Límits només al contingut del text
+      width: 100%; // Permet que sigui flexible dins del max-width
+      padding: 0 15px; // Mantenim espaiat consistent
+    }
+
+    // Assegurem que el container-fluid no es vegi afectat
+    .container-fluid {
+      padding: 0; // Eliminar padding si cal, però pots ajustar-lo
+    }
+
+    @media (min-width: 768px) {
+      text-align: justify !important;
+    }
+    .button-container {
+      @media (max-width: 767px) {
+        // Breakpoint md (pantalles petites)
+        justify-content: center; // Centra els botons en pantalles petites
+        gap: 0.5rem; // gap-sm-0.5 de Bootstrap
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
 }

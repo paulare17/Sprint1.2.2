@@ -85,6 +85,7 @@ html {
 
 #section1 {
   padding-top: 6rem;
+  padding-bottom: 2rem;
   width: 100% !important;
 
   .blue-rectangle {
@@ -93,8 +94,8 @@ html {
     width: 80%;
     height: 60%;
     border-radius: 0px 0px 0px 120px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     background-color: $primary;
+    padding: 0 !important;
     z-index: 0 !important;
   }
   #img-rectang {
@@ -104,10 +105,11 @@ html {
     padding-left: 3rem;
     padding-top: 3rem;
 
+
     .text-wrapper {
-      display: flex;
-      justify-content: center;
-    }
+        display: flex;
+        justify-content: center;
+      }
 
     .text-content {
       max-width: 25rem; // Límits només al contingut del text
@@ -133,6 +135,88 @@ html {
   }
 }
 
+
+
 .btn-primary {
   background-color: $primary;
+}
+
+#section2 {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    width: 100% !important;
+
+    .nav-item {
+        margin: 0;
+        padding: 0;
+
+    }
+    
+    .nav-link {
+        color: grey;
+        &.active {
+            border-bottom: solid $secondary;
+        }
+    }
+    .blue-rectangle2 {
+        bottom: 0;
+        left: 0; 
+        width: 80%;
+        height: 60%;
+        border-radius: 0px 0px 120px 0px; 
+        background-color: $primary; 
+        z-index: 0 !important;
+      }
+    
+      #img-rectang2 {
+        padding-top: 3rem;
+      }
+
+      #img-tab {
+        @media (min-width: 768px) {
+            padding-left: 15rem;
+          }
+      }
+    
+      #text-global2 {
+        padding-left: 3rem;
+        padding-top: 3rem;
+    
+        .text-wrapper {
+          display: flex;
+          justify-content: center;
+        }
+    
+        .text-content {
+          max-width: 25rem; /* Límits només al contingut del text */
+          width: 100%; /* Permet que sigui flexible dins del max-width */
+          padding: 0 15px; /* Espaiat consistent */
+        }
+    
+        .container-fluid {
+          padding: 0; /* Elimina padding per defecte */
+        }
+    
+        @media (min-width: 768px) {
+          text-align: justify !important; /* Com al codi original */
+        }
+    
+        .btn {
+          @media (max-width: 767px) {
+            justify-content: center; /* Centra el botó en pantalles petites */
+          }
+        }
+      }
+    
+    }
+    
+    .container-fluid {
+      padding: 0; 
+    }
+
+
+
+
+#section3 {
+    
 }

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprint 1.2</title>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon-32x32.png" />
+    <!-- Config bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Config SCSS -->
+    <link rel="stylesheet" href="./styles.scss" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+
+    <div id="navbar-bookmark"></div>
+    <div id="section-principal"></div>
+    <div id="section-tabs"></div>
+    <div id="section-down"></div>
+
+    <!-- Barra de navegació -->
+    <header>
+      <nav class="navbar navbar-expand-md fixed-top container">
+        <div class="container align-items-center">
+          <a class="navbar-brand ms-sm-3" href="#">
+            <img id="logo-image" src="./public/logo-bookmark.svg" />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <img src="./public/icon-hamburger.svg" alt="icon hamburguer" />
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <img
+              src="./public/icon-close.svg"
+              class="d-none position-fixed top-0 end-0 mt-1 me-1"
+              id="close-btn"
+              alt="A close button"
+            />
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary border-0" id="login" href="#"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Primera secció: inici -->
+    <section class="position-relative overflow-hidden" id="section1">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- imatge amb rectangle -->
+          <div
+            class="col-sm-12 col-md-6 col-lg-6 col-xl-6 order-md-2 position-relative"
+            id="img-rectang"
+          >
+            <div class="container-fluid position-absolute blue-rectangle"></div>
+            <img
+              src="./public/illustration-hero.svg"
+              class="img-fluid position-relative"
+              style="z-index: 100"
+              alt="A tablet displaying an app interface"
+            />
+          </div>
+
+          <!-- text -->
+          <div
+            class="col-sm-12 col-md-6 col-lg-6 order-md-1 text-center position-relative"
+            id="text-global"
+          >
+            <div class="text-wrapper">
+              <div class="text-content">
+                <h2 class="text-md-start text-md-nowrap">
+                  A Simple Bookmark Manager
+                </h2>
+                <p class="text-md-start text-md-nowrap">
+                  A clear and simple interface to organize your favourite
+                  websites. Open a new browser tab and see your sites load
+                  instantly. Try it for free.
+                </p>
+                <div class="button-container d-flex text-md-start gap-3">
+                  <button class="btn btn-primary text-nowrap">
+                    Get it on Chrome
+                  </button>
+                  <button class="btn btn-light shadow text-nowrap">
+                    Get it on Firefox
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segona secció: pestanyes -->
+    <section class="position-relative" id="section2">
+      <div class="container text-center d-flex flex-column align-items-center">
+        <h2 class="mt-4">Features</h2>
+        <p class="justify-content-center" style="max-width: 30rem">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </div>
+
+      <!-- pestanyes -->
+      <div class="container d-flex flex-column align-items-center">
+        <div class="row justify-content-center">
+          <ul
+            class="nav nav-underline flex-column flex-md-row align-items-center text-center"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#simple"
+                data-bs-target="#simple"
+                id="tab1"
+                data-bs-toggle="tab"
+                >Simple Bookmarking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#speedy"
+                data-bs-target="#speedy"
+                id="tab2"
+                data-bs-toggle="tab"
+                >Speedy Searching</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#easy"
+                data-bs-target="#easy"
+                id="tab3"
+                data-bs-toggle="tab"
+                >Easy Sharing</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- contingut pestanyes -->
+      <div class="tab-content">
+        <!-- pestanya 1 -->
+        <div class="tab-pane fade show active" id="simple" role="tabpanel">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <!-- imatge 1 amb rectangle 2-->
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative d-flex justify-content-center"
+                id="img-rectang2"
+              >
+                <div
+                  class="container-fluid position-absolute blue-rectangle2"
+                ></div>
+                <img
+                  src="./public/illustration-features-tab-1.svg"
+                  class="img-fluid position-relative"
+                  style="z-index: 100"
+                  alt="A tablet displaying an app interface"
+                  id="img-tab"
+                />
+              </div>
+
+              <!-- text pest 1-->
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 text-center position-relative"
+                id="text-global2"
+              >
+                <div class="text-wrapper">
+                  <div class="text-content">
+                    <h2 class="text-md-start text-md-nowrap mt-5">
+                      Bookmark in one click
+                    </h2>
+                    <p class="text-md-start">
+                      Organize your bookmarks however you like. Our simple
+                      drag-and-drop gives you complete control over how you
+                      manage your favourite sites.
+                    </p>
+                    <button class="btn btn-primary">More info</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- pestanya 2 -->
+        <div class="tab-pane fade" id="speedy" role="tabpanel">
+          <div class="container-fluid position-relative">
+            <div class="row align-items-center">
+              <!-- imatge 2 amb rectangle 2-->
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative d-flex justify-content-center"
+                id="img-rectang2"
+              >
+                <div
+                  class="container-fluid position-absolute blue-rectangle2"
+                ></div>
+                <img
+                  src="./public/illustration-features-tab-2.svg"
+                  class="img-fluid position-relative"
+                  style="z-index: 100"
+                  alt="A tablet displaying an app interface"
+                  id="img-tab"
+                />
+              </div>
+
+              <!-- text pest 2-->
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 text-center position-relative"
+                id="text-global2"
+              >
+                <div class="text-wrapper">
+                  <div class="text-content">
+                    <h2 class="text-md-start text-md-nowrap mt-5">
+                      Intelligent search
+                    </h2>
+                    <p class="text-md-start">
+                      Our powerfull search feature will help you find saved
+                      sites in no time at all. No need to trawl thought all for
+                      your bookmarks.
+                    </p>
+                    <button class="btn btn-primary">More info</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- pestanya 3 -->
+        <div class="tab-pane fade" id="easy" role="tabpanel">
+          <div class="container-fluid position-relative">
+            <div class="row align-items-center">
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative d-flex justify-content-center"
+                id="img-rectang2"
+              >
+                <div
+                  class="container-fluid position-absolute blue-rectangle2"
+                ></div>
+                <img
+                  src="./public/illustration-features-tab-3.svg"
+                  class="img-fluid position-relative"
+                  style="z-index: 100"
+                  alt="A tablet displaying an app interface"
+                  id="img-tab"
+                />
+              </div>
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 text-center position-relative"
+                id="text-global2"
+              >
+                <div class="text-wrapper">
+                  <div class="text-content">
+                    <h2 class="text-md-start text-md-nowrap mt-5">
+                      Share your bookmarks
+                    </h2>
+                    <p class="text-md-start">
+                      Easily share your bookmarks and collections with others.
+                      Create a shareable link that you can send at the click of
+                      a button.
+                    </p>
+                    <button class="btn btn-primary">More info</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tercera secció: Downloads -->
+    <section id="section3">
+      <div class="row justify-content-center">
+        <div class="col p-3">
+          <h2 class="text-center">Download the extension</h2>
+          <p class="text-center">
+            We've got more browsers in the pipeline. Please do let us know if
+            you've got a favourite you'd like us to prioritize.
+          </p>
+        </div>
+      </div>
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="card text-center mb-3 border-0" style="width: 18rem">
+          <div class="card-body shadow">
+            <img src="./public/logo-chrome.svg" alt="Chrome logo" />
+            <h5 class="card-title">Add to Chrome</h5>
+            <p class="card-text">Minimum version 62</p>
+            <div class="d-flex justify-content-center my-3">
+              <img
+                src="./public/bg-dots.svg"
+                class="d-inline-block align-text-top"
+                alt="decoration dots"
+                id="dots"
+              />
+            </div>
+            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+          </div>
+        </div>
+        <div class="card text-center mb-3 border-0" style="width: 18rem">
+          <div class="card-body shadow">
+            <img src="./public/logo-firefox.svg" alt="Firefox logo" />
+            <h5 class="card-title">Add to Firefox</h5>
+            <p class="card-text">Minimum version 55</p>
+            <div class="d-flex justify-content-center my-3">
+              <img
+                src="./public/bg-dots.svg"
+                class="d-block mx-auto"
+                alt="decoration dots"
+                id="dots"
+              />
+            </div>
+            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+          </div>
+        </div>
+        <div class="card text-center mb-3 border-0" style="width: 18rem">
+          <div class="card-body shadow">
+            <img src="./public/logo-opera.svg" alt="Opera logo" />
+            <h5 class="card-title">Add to Opera</h5>
+            <p class="card-text">Minimum version 46</p>
+            <div class="d-flex justify-content-center my-3">
+              <img
+                src="./public/bg-dots.svg"
+                class="d-inline-block align-text-top"
+                alt="decoration dots"
+                id="dots"
+              />
+            </div>
+            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quarta secció: FAQ -->
+    <section></section>
+
+    <!-- Cinquena secció: form (serà millor posar-ho com a footer?) -->
+    <section></section>
+
+    <!-- Sisena secció: peu de pàgina -->
+    <footer></footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

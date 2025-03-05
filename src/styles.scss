@@ -214,10 +214,6 @@ html {
       padding: 0; 
     }
 
-
-
-
-
   
 #section3 {
   .card-body {
@@ -237,4 +233,23 @@ html {
     margin: 0 auto; /* Centra el bloc horitzontalment */
     display: block; /* Assegura que sigui un bloc */
   }
+}
+
+#section4 {
+
+
+  #accordionFaqs {
+    width: 25rem;
+  }  
+
+  #accordion-body {
+   width: 25rem;
+  }
+  #text-faqs{
+    max-width: 19rem !important;
+    text-align: center !important;
+    margin: 0 auto; /* Centra el bloc horitzontalment */
+    display: block; /* Assegura que sigui un bloc */
+  }
+
 }

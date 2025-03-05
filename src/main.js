@@ -78,4 +78,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("section-down").innerHTML = "Error: " + error.message;
         console.error("Error carregant section3-down:", error);
       });
+
+      fetch("/section4-faqs.html")
+      .then((response) => {
+        if (!response.ok) throw new Error("No es pot carregar section4-faqs.html");
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("section-faqs").innerHTML = data;
+      })
+      .catch((error) => {
+        document.getElementById("section-faqs").innerHTML = "Error: " + error.message;
+        console.error("Error carregant section4-faqs:", error);
+      });
   });

@@ -13,7 +13,7 @@ $gris: #797979;
 body,
 html {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
 }
 
 #navbarNav {
@@ -114,7 +114,7 @@ html {
     .text-content {
       max-width: 25rem; // Límits només al contingut del text
       width: 100%; // Permet que sigui flexible dins del max-width
-      padding: 0 15px; // Mantenim espaiat consistent
+      padding: 0 1rem; // Mantenim espaiat consistent
     }
 
     // Assegurem que el container-fluid no es vegi afectat
@@ -190,7 +190,7 @@ html {
         .text-content {
           max-width: 25rem; /* Límits només al contingut del text */
           width: 100%; /* Permet que sigui flexible dins del max-width */
-          padding: 0 15px; /* Espaiat consistent */
+          padding: 0 1rem; /* Espaiat consistent */
         }
     
         .container-fluid {
@@ -217,6 +217,24 @@ html {
 
 
 
+
+  
 #section3 {
-    
+  .card-body {
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+
+    #dots {
+      box-sizing: border-box;
+      max-width: 100%;
+      height: auto;
+  }
+  }
+
+  #text-downloads{
+    max-width: 19rem !important;
+    text-align: center !important;
+    margin: 0 auto; /* Centra el bloc horitzontalment */
+    display: block; /* Assegura que sigui un bloc */
+  }
 }

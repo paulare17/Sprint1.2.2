@@ -91,4 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("section-faqs").innerHTML = "Error: " + error.message;
         console.error("Error carregant section4-faqs:", error);
       });
+
+      fetch("/footer.html")
+      .then((response) => {
+        if (!response.ok) throw new Error("No es pot carregar footer-bookmark.html");
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("footer-bookmark").innerHTML = data;
+      })
+      .catch((error) => {
+        document.getElementById("footer-bookmark").innerHTML = "Error: " + error.message;
+        console.error("Error carregant footer-bookmark:", error);
+      });
   });

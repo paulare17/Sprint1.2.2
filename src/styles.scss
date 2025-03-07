@@ -53,6 +53,7 @@ html {
 
     #login {
       border: 2px solid white !important;
+
     }
 
     #logo-image {
@@ -146,12 +147,25 @@ html {
 
 .btn-primary {
   background-color: $primary;
+
+  &:hover {
+    background-color: #f7f7f7;
+    color: $primary;
+    border: 1px solid $primary;
+  }
 }
 
 #section2 {
   padding-top: 4rem;
   padding-bottom: 2rem;
   width: 100% !important;
+
+  #tab1, #tab2, #tab3 {
+    &:hover {
+      border: none;
+      color: $secondary;
+    }
+  }
 
   .nav-item {
     margin: 0;

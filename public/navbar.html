@@ -8,7 +8,7 @@
 <body>
      <!-- Barra de navegació -->
      <header>
-        <nav class="navbar navbar-expand-md fixed-top container">
+        <nav class="navbar navbar-expand-md container-fluid" id="navbar-top">
           <div class="container align-items-center">
             <a class="navbar-brand ms-sm-3" href="#">
               <img id="logo-image" src="./public/logo-bookmark.svg" />
@@ -21,16 +21,18 @@
             >
               <img src="./public/icon-hamburger.svg" alt="icon hamburguer" />
             </button>
+            
+            <img
+              src="./public/icon-close.svg"
+              class="d-none position-fixed top-0 end-0 mt-1 me-1"
+              id="close-btn"
+              alt="A close button"
+            />
+            
             <div
               class="collapse navbar-collapse justify-content-end"
               id="navbarNav"
             >
-              <img
-                src="./public/icon-close.svg"
-                class="d-none position-fixed top-0 end-0 mt-1 me-1"
-                id="close-btn"
-                alt="A close button"
-              />
               <ul class="navbar-nav">
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Features</a>

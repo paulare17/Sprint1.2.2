@@ -3,9 +3,9 @@ import "./style.css";
 
 //ocultar - amagar el close button del menú
 document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggler = document.querySelector(".navbar-toggler");
-  const closeBtn = document.getElementById("close-btn");
+
   const navbarNav = document.getElementById("navbarNav");
+  const closeBtn = document.getElementById("close-btn");
 
   // Quan el menú s'obre, mostra el botó de tancar
   navbarNav.addEventListener("shown.bs.collapse", function () {
@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fes que el botó de tancar funcioni
   closeBtn.addEventListener("click", function () {
-    navbarNav.classList.remove("show"); // Tanca el menú manualment
-    closeBtn.classList.add("d-none"); // Amaga el botó
+    const collapse = bootstrap.Collapse.getInstance(navbarNav) || new bootstrap.Collapse(navbarNav);
+    collapse.hide(); // Tanca el menú correctament
   });
 });
 

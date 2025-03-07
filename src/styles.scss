@@ -21,6 +21,10 @@ html {
   text-transform: uppercase;
 }
 
+#navbar-top {
+  background-color: white;
+}
+
 .navbar-collapse {
   transition: none !important;
 
@@ -31,10 +35,15 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 32, 174, 0.619);
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1999 !important;
+
+
 
     .nav-link {
       color: white !important;
@@ -50,7 +59,7 @@ html {
       display: none !important;
     }
   }
-}
+  }
 
 .nav-item {
   margin: 1.5rem;
